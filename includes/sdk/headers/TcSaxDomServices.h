@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////////////////////////
+// This is a part of the Beckhoff TwinCAT Software Development Kit.
+// Copyright (C) Beckhoff Automation GmbH
+// All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+#include "TcServices.h"
+
+// interface ids
+TCOM_DECL_INTERFACE("9EFCAAA8-556F-4B69-AB9F-2967B7F9DFC6", ITcJsonSaxReader)
+TCOM_DECL_INTERFACE("E695C12A-2D9A-408E-B9B2-508D7CE3AF9A", ITcJsonSaxWriter)
+TCOM_DECL_INTERFACE("472183F9-5D09-4D8C-92FD-E0524EF658BF", ITcJsonSaxWriter2)
+TCOM_DECL_INTERFACE("196BB18E-9D99-40CE-B81E-48992CE43217", ITcJsonSaxPrettyWriter)
+TCOM_DECL_INTERFACE("2CDC7D30-5F22-429F-9065-D912D8421148", ITcJsonSaxHandler)
+TCOM_DECL_INTERFACE("81E405D9-9FAF-4C28-9985-185AC023A4C2", ITcJsonSaxValues)
+TCOM_DECL_INTERFACE("7E23DC07-F23F-5198-9983-6C86F8E33DF7", ITcJsonDomParser)
+TCOM_DECL_INTERFACE("81F923C8-1950-4CE3-A6EC-D0BE05D3E316", ITcJsonDomParser2)
+TCOM_DECL_INTERFACE("86123BA3-7D31-4FBD-B2AA-90527A60B30F", ITcJsonDomParser3)
+TCOM_DECL_INTERFACE("37B6CDED-5930-4DE2-B9F2-86F355E27557", ITcJsonDomParserError)
+TCOM_DECL_INTERFACE("683BE9D6-670C-470A-9C00-BAD6A0A3C461", ITcXmlDomParserBase)
+TCOM_DECL_INTERFACE("D271EADF-DCBB-47F9-BAE1-628E9DB7DA35", ITcXmlDomParser)
+TCOM_DECL_INTERFACE("2236A48A-FFB4-4316-8218-FC32F142DAFF", ITcXmlDomParserPlc)
+TCOM_DECL_INTERFACE("85D12012-7AC0-487F-A49D-154DB46E728C", ITcDomParserFileAccess)
+TCOM_DECL_INTERFACE("3532E040-E9BC-486B-919C-A2C0D92EAEF9", ITcDomParserStreamAccess)
+
+const CTCID CID_TcJsonSaxReader									= {0x9c35565f, 0xb318, 0x42bf,{0xb4, 0x79, 0x60, 0x59, 0x8d, 0x7a, 0x32, 0xef}};	// {9C35565F-B318-42BF-B479-60598D7A32EF}
+const CTCID CID_TcJsonSaxWriter									= {0xe6b01098, 0xdbc0, 0x4505,{0x9e, 0x3c, 0x5d, 0xf8, 0x46, 0x96, 0x07, 0xc4}}; // {E6B01098-DBC0-4505-9E3C-5DF8469607C4}
+const CTCID CID_TcJsonSaxPrettyWriter							= {0x82883eb9, 0x12a9, 0x44d8,{0xb6, 0xc3, 0xca, 0xa1, 0x27, 0x7f, 0x53, 0x3d}}; // {82883EB9-12A9-44d8-B6C3-CAA1277F533D}
+const CTCID CID_TcJsonDomParser									= {0x4fb6d4e1, 0xb334, 0x5a8e,{0xa6, 0x97, 0xba, 0x28, 0x19, 0xaf, 0xca, 0xd8}};	// {4FB6D4E1-B334-5A8E-A697-BA2819AFCAD8}
+const CTCID CID_TcJsonDomPrettyParser							= {0xa5fcc518, 0xf4da, 0x49a1,{0xac, 0xc6, 0x8f, 0x4b, 0xb7, 0x4f, 0xab, 0x95}};	// {A5FCC518-F4DA-49A1-ACC6-8F4BB74FAB95}
+const CTCID CID_TcJsonDynDomParser								= {0x30ca3db2, 0x4411, 0x4145,{0xa9, 0xfa, 0x76, 0x52, 0x96, 0x06, 0x1a, 0xe8}};	// {30CA3DB2-4411-4145-A9FA-765296061AE8}
+const CTCID CID_TcJsonDynDomPrettyParser						= {0xdd6d1801, 0x0590, 0x4cd1,{0xb4, 0x80, 0x96, 0x1a, 0xba, 0x33, 0x22, 0xf6}};	// {DD6D1801-0590-4CD1-B480-961ABA3322F6}
+const CTCID	CID_TcXmlDomParser									= {0xcd885acc, 0x095a, 0x4326,{0x81, 0x8c, 0xaf, 0x3e, 0xf0, 0x85, 0x3a, 0x21}};	// {CD885ACC-095A-4326-818C-AF3EF0853A21}
+
+
+static const GUID TC_LICENSEID_JSON_DATA_ITF					= {0xe008e3c8, 0x6bd9, 0x491c,{0xb6, 0x73, 0xdc, 0x45, 0xcc, 0x7a, 0xa4, 0xf1}};	// {E008E3C8-6BD9-491C-B673-DC45CC7AA4F1}

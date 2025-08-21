@@ -5,19 +5,19 @@ fn main() {
     let target = env::var("TARGET").unwrap();
 
     let lib_dir = if target.contains("i686") {
-        "includes/ads/libs/Lib"
+        "includes/sdk/libs/TwinCAT RT (x86)"
     } else {
-        "includes/ads/libs/x64/lib"
+        "includes/sdk/libs/TwinCAT RT (x64)"
     };
 
     println!("cargo:rustc-link-search=native={}", lib_dir);
     println!("cargo:rustc-link-lib=dylib=TcAdsDll");
 
-    println!("cargo:rerun-if-changed=wrapper_ads.h");
+    println!("cargo:rerun-if-changed=wrapper_sdk.h");
 
     let bindings = bindgen::Builder::default()
-        .header("wrapper_ads.h")
-        .clang_arg("--include-directory=includes/ads/headers")
+        .header("wrapper_sdk.h")
+        .clang_arg("--include-directory=includes/sdk/headers")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         .generate()
         .unwrap();
